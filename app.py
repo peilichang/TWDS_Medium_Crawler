@@ -6,7 +6,7 @@ from crawler_function import MediumPublicationCrawler, MediumCrawler
 
 try:
     load_dotenv()
-    gc = pygsheets.authorize(service_account_file='sheet.json')
+    gc = pygsheets.authorize(service_account_file=os.environ["SERVICE_ACCOUNT_FILE_NAME"])
 
     # Google Sheet Url
     sheet_url = os.environ["GOOGLE_SHEET_URL"]
